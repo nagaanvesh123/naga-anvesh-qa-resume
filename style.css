@@ -11,11 +11,12 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #0f172a;
+  color: #020617;
 }
 
 header h1 {
@@ -28,11 +29,12 @@ header p {
 }
 
 .socials a {
-  color: #0f172a;
   font-size: 22px;
   margin: 0 10px;
+  color: #020617;
 }
 
+/* SECTIONS */
 section {
   padding: 50px 15%;
 }
@@ -44,40 +46,43 @@ h2 {
 }
 
 .about p {
-  text-align: center;
   max-width: 800px;
   margin: auto;
+  text-align: center;
 }
 
+/* SKILLS GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.card, .project-card {
+.card {
   background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 14px;
   text-align: center;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .card i {
-  font-size: 30px;
+  font-size: 32px;
   color: #22c55e;
   margin-bottom: 10px;
 }
 
-.card:hover, .project-card:hover {
-  transform: translateY(-6px);
+.card:hover {
+  transform: translateY(-8px);
   background: #020617;
 }
 
+/* EXPERIENCE */
 .timeline .item {
   background: #1e293b;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .timeline h3 {
@@ -94,9 +99,57 @@ h2 {
   padding-left: 20px;
 }
 
+/* FOOTER */
 footer {
+  background: #020617;
   text-align: center;
   padding: 20px;
-  background: #020617;
   font-size: 14px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 18px;
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: #22c55e;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style: none;
+}
+
+.modal-content li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  color: #94a3b8;
 }

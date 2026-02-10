@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Naga Anvesh | QA Engineer</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,27 +17,57 @@
   <h1>Naga Anvesh Madineni</h1>
   <p>QA / Test Engineer | Manual & API Testing</p>
   <div class="socials">
-    <a href="https://www.linkedin.com/in/madineninagaanvesh/"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:nagaanvesh50@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/madineninagaanvesh/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:nagaanvesh50@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
   </div>
 </header>
 
 <section class="about">
   <h2>About Me</h2>
   <p>
-    QA Engineer with 2.5+ years of experience specializing in Automotive Infotainment (IVI) systems and Web & Mobile Application Testing within Agile/Scrum environments. Skilled in both Manual Testing and RESTful API Automation, with comprehensive knowledge of SDLC and STLC processes. Demonstrated expertise in test planning, strategy development, scenario design, release validation, and defect life cycle management. Proven track record of ensuring quality and reliability in IVI platforms and enterprise-scale data solutions through meticulous testing and process optimization.
+    QA Engineer with 2.5+ years of experience in Automotive Infotainment (IVI)
+    and Web & Mobile Application Testing in Agile/Scrum environments.
+    Strong expertise in Manual Testing, RESTful API Testing, SDLC & STLC.
   </p>
 </section>
 
-<section class="Techinical Skills">
+<section class="skills">
   <h2>Skills</h2>
+
   <div class="grid">
-    <div class="card"><i class="fas fa-bug"></i><p>Testing Types</p></div>
-    <div class="card"><i class="fas fa-network-wired"></i><p>API Testing & Automation</p></div>
-    <div class="card"><i class="fas fa-car"></i><p>Automotive Testing</p></div>
-    <div class="card"><i class="fas fa-sync"></i><p>Tools</p></div>
-    <div class="card"><i class="fas fa-tasks"></i><p>Consepts</p></div>
-    <div class="card"><i class="fas fa-database"></i><p>Techinical Languages</p></div>
+    <div class="card" onclick="openSkill('testing')">
+      <i class="fas fa-bug"></i>
+      <p>Testing Types</p>
+    </div>
+
+    <div class="card" onclick="openSkill('api')">
+      <i class="fas fa-network-wired"></i>
+      <p>API Testing & Automation</p>
+    </div>
+
+    <div class="card" onclick="openSkill('automotive')">
+      <i class="fas fa-car"></i>
+      <p>Automotive Testing</p>
+    </div>
+
+    <div class="card" onclick="openSkill('tools')">
+      <i class="fas fa-tools"></i>
+      <p>Tools</p>
+    </div>
+
+    <div class="card" onclick="openSkill('concepts')">
+      <i class="fas fa-tasks"></i>
+      <p>Concepts</p>
+    </div>
+
+    <div class="card" onclick="openSkill('languages')">
+      <i class="fas fa-database"></i>
+      <p>Technical Languages</p>
+    </div>
   </div>
 </section>
 
@@ -44,47 +78,135 @@
       <h3>KPIT Technologies</h3>
       <span>Test Engineer (2023 – Present)</span>
       <ul>
-        <li>Designed & executed 300+ test cases</li>
+        <li>Designed and executed 300+ test cases</li>
         <li>Logged and tracked 200+ defects</li>
-        <li>System-level testing for IVI features</li>
+        <li>System-level IVI testing</li>
         <li>BVT, Regression, Smoke & Integration testing</li>
-        <li>API testing using Postman & CI/CD</li>
+        <li>API testing using Postman with CI/CD</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="project-card">
-      <h3>Flexi Van – IVI System</h3>
-      <p>Audio, Media, Android Auto, Apple CarPlay, Navigation testing</p>
-    </div>
-    <div class="project-card">
-      <h3>Data Platform</h3>
-      <p>Enterprise Web & Mobile app testing with API automation</p>
     </div>
   </div>
 </section>
 
 <section class="education">
   <h2>Education</h2>
-  <p>
-    <strong>B.Tech – Computer Science</strong><br>
-    Lovely Professional University<br>
-    CGPA: 8.5
-  </p>
-  <p>
-    <strong>Senior Secondary – Maths, Physics, Chemestry</strong><br>
-    Sri Chaitanya Institutions<br>
-    CGPA: 8.3
-  </p>
+  <p><strong>B.Tech – Computer Science</strong><br>Lovely Professional University | CGPA: 8.5</p>
+  <p><strong>Senior Secondary (MPC)</strong><br>Sri Chaitanya Institutions | CGPA: 8.3</p>
 </section>
 
 <footer>
   <p>© 2026 Naga Anvesh | QA Engineer</p>
 </footer>
+
+<!-- MODAL -->
+<div id="skillModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <ul id="modalList"></ul>
+  </div>
+</div>
+
+<script>
+const skillsData = {
+  testing: {
+    title: "Testing Types",
+    items: [
+      "Manual Testing",
+      "Functional Testing",
+      "Non-Functional Testing",
+      "Regression Testing",
+      "Integration Testing",
+      "Smoke Testing",
+      "Sanity Testing",
+      "Build Verification Testing (BVT)",
+      "User Acceptance Testing (UAT)"
+    ]
+  },
+  api: {
+    title: "API Testing & Automation",
+    items: [
+      "RESTful API Testing",
+      "Postman",
+      "Swagger",
+      "API Automation",
+      "CI/CD Pipelines"
+    ]
+  },
+  automotive: {
+    title: "Automotive Testing",
+    items: [
+      "In-Vehicle Infotainment (IVI)",
+      "Audio & Media",
+      "Bluetooth",
+      "Android Auto",
+      "Apple CarPlay",
+      "Radio",
+      "Navigation"
+    ]
+  },
+  tools: {
+    title: "Tools",
+    items: [
+      "CodeBeamer",
+      "JIRA",
+      "Renesas Debugger",
+      "PCAT",
+      "Sentinel Test Harness",
+      "MobaXterm",
+      "Putty",
+      "Git",
+      "VS Code",
+      "Eclipse",
+      "Confluence",
+      "SharePoint"
+    ]
+  },
+  concepts: {
+    title: "Concepts",
+    items: [
+      "SDLC",
+      "STLC",
+      "Agile Methodology",
+      "Test Planning",
+      "Test Strategy",
+      "Test Case Design",
+      "Test Scenario Creation",
+      "Defect Life Cycle",
+      "Cross-Browser Testing",
+      "Performance Testing"
+    ]
+  },
+  languages: {
+    title: "Technical Languages",
+    items: [
+      "Python",
+      "Java (Basic)",
+      "C (Basic)"
+    ]
+  }
+};
+
+function openSkill(key) {
+  document.getElementById("modalTitle").innerText = skillsData[key].title;
+  const list = document.getElementById("modalList");
+  list.innerHTML = "";
+  skillsData[key].items.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+  });
+  document.getElementById("skillModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("skillModal").style.display = "none";
+}
+
+window.onclick = e => {
+  if (e.target.classList.contains("modal")) closeModal();
+};
+</script>
 
 </body>
 </html>
