@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #0f172a;
+}
+
+header h1 {
+  font-size: 42px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #0f172a;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+section {
+  padding: 50px 15%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #22c55e;
+}
+
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card, .project-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card i {
+  font-size: 30px;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.card:hover, .project-card:hover {
+  transform: translateY(-6px);
+  background: #020617;
+}
+
+.timeline .item {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.timeline h3 {
+  color: #22c55e;
+}
+
+.timeline span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.timeline ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  font-size: 14px;
+}
