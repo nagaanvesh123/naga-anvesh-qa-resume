@@ -1,45 +1,54 @@
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
-const slider = document.querySelector(".tab-slider");
-
-function activateTab(tab) {
-
-    tabs.forEach(btn => btn.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
-
-    tab.classList.add("active");
-
-    const content = document.getElementById(tab.dataset.tab);
-    content.classList.add("active");
-
-    slider.style.width = tab.offsetWidth + "px";
-    slider.style.left = tab.offsetLeft + "px";
-
-    animateProgress(content);
-}
-
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => activateTab(tab));
+// PARTICLES
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    size: { value: 3 },
+    color: { value: "#ff3c3c" },
+    line_linked: {
+      enable: true,
+      color: "#ff3c3c",
+      opacity: 0.3
+    },
+    move: { speed: 2 }
+  }
 });
 
-function animateProgress(content) {
+// Typing Animation
+const typingText = document.querySelector(".typing");
+const words = ["Manual Testing Specialist", "API Testing Expert", "Automotive IVI QA", "Agile Practitioner"];
+let wordIndex = 0;
+let charIndex = 0;
 
-    const bar = content.querySelector("span");
-    const percentText = content.querySelector(".percent");
-    const target = bar.getAttribute("data-progress");
-
-    bar.style.width = target + "%";
-
-    let count = 0;
-    const interval = setInterval(() => {
-        if (count >= target) {
-            clearInterval(interval);
-        } else {
-            count++;
-            percentText.textContent = count + "%";
-        }
-    }, 15);
+function typeEffect() {
+  if (charIndex < words[wordIndex].length) {
+    typingText.textContent += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
 }
 
-/* AUTO ACTIVATE FIRST */
-activateTab(document.querySelector(".tab-btn.active"));
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingText.textContent = words[wordIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeEffect, 200);
+  }
+}
+
+typeEffect();
+
+// Scroll Reveal
+window.addEventListener("scroll", function() {
+  document.querySelectorAll(".reveal").forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});

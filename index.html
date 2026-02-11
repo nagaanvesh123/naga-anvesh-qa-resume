@@ -5,187 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Naga Anvesh | QA Engineer</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://kit.fontawesome.com/81d2e6e9c2.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">Naga Anvesh<span>.</span></div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<div id="particles-js"></div>
+
+<nav>
+  <h2 class="logo">Naga Anvesh</h2>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-left">
-        <h4>— QA Engineer</h4>
-        <h1>Naga Anvesh</h1>
-        <h3>Manual & API Test Engineer</h3>
-        <p>
-            2.5+ years experience in Automotive IVI & Web Application Testing.
-            Specialized in Manual Testing, API Automation, Agile & Bug Lifecycle Management.
-        </p>
+<section class="hero">
+  <div class="hero-text">
+    <h1>QA <span>Engineer</span></h1>
+    <h3 class="typing"></h3>
+    <p>
+      QA Engineer with 2.5+ years of experience in Manual Testing,
+      API Testing, Regression Testing, STLC, Agile, Automotive IVI Testing
+      and Web Application Validation.
+    </p>
 
-        <div class="buttons">
-            <a href="#contact" class="btn primary">Hire Me</a>
-            <a href="Naga_Anvesh_CV.pdf" download class="btn outline">
-            <i class="fas fa-download"></i> Download CV
-            </a>
-        </div>
+    <div class="buttons">
+      <a href="#contact" class="btn">Hire Me</a>
+      <a href="Naga_Anvesh_CV.pdf" download class="btn">Download CV</a>
     </div>
+  </div>
 
-    <div class="hero-right">
-        <img src="images/profile.png" alt="Naga Anvesh">
-    </div>
+  <div class="hero-img">
+    <img src="images/profile.png" alt="Naga Anvesh QA Engineer">
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-    <h2>About Me</h2>
-    <p>
-        QA Engineer experienced in Automotive Infotainment, Web & API testing.
-        Strong knowledge of SDLC, STLC, Agile methodologies and defect creation & tracking.
-    </p>
+<!-- PROJECTS -->
+<section class="section reveal" id="projects">
+<h2>Projects</h2>
+<div class="card-container">
+  <div class="card">
+    <h3>Automotive IVI Testing</h3>
+    <p>Validated Android Auto, Apple CarPlay, Media, Bluetooth modules using Manual & REST API Testing.</p>
+  </div>
+
+  <div class="card">
+    <h3>Web Application QA</h3>
+    <p>Performed Functional, Regression, Smoke, Sanity & Integration Testing under Agile Scrum methodology.</p>
+  </div>
+</div>
 </section>
 
 <!-- SKILLS -->
-<section class="section ultra-glass" id="skills">
-    <h2>Skills</h2>
+<section class="section reveal" id="skills">
+<h2>Technical Skills</h2>
 
-    <div class="skill-tabs">
-        <div class="tab-slider"></div>
+<div class="skill">
+  <p>Manual Testing</p>
+  <div class="progress"><span style="width:95%"></span></div>
+</div>
 
-        <button class="tab-btn active" data-tab="manual">
-            <i class="fas fa-bug"></i> Manual Testing
-        </button>
+<div class="skill">
+  <p>API Testing (Postman)</p>
+  <div class="progress"><span style="width:85%"></span></div>
+</div>
 
-        <button class="tab-btn" data-tab="api">
-            <i class="fas fa-network-wired"></i> API Testing
-        </button>
+<div class="skill">
+  <p>JIRA & Defect Management</p>
+  <div class="progress"><span style="width:90%"></span></div>
+</div>
 
-        <button class="tab-btn" data-tab="automotive">
-            <i class="fas fa-car"></i> Automotive
-        </button>
-
-        <button class="tab-btn" data-tab="tools">
-            <i class="fas fa-tools"></i> Tools
-        </button>
-
-        <button class="tab-btn" data-tab="concepts">
-            <i class="fas fa-lightbulb"></i> Concepts
-        </button>
-
-        <button class="tab-btn" data-tab="languages">
-            <i class="fas fa-code"></i> Languages
-        </button>
-    </div>
-
-    <div class="tab-content active" id="manual">
-        <p>Functional, Regression, Integration, Smoke, Sanity, BVT, UAT</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="90"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-
-    <div class="tab-content" id="api">
-        <p>RESTful API, Postman, Swagger, CI/CD Pipelines</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="85"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-
-    <div class="tab-content" id="automotive">
-        <p>IVI, Android Auto, Apple CarPlay, Media, Bluetooth</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="88"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-
-    <div class="tab-content" id="tools">
-        <p>JIRA, CodeBeamer, Git, VS Code, Excel, Confluence</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="80"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-
-    <div class="tab-content" id="concepts">
-        <p>SDLC, STLC, Agile, Test Planning, Defect Lifecycle</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="92"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
-
-    <div class="tab-content" id="languages">
-        <p>Python, Java (Basic), C (Basic)</p>
-        <div class="progress-wrapper">
-            <div class="progress-bar"><span data-progress="70"></span></div>
-            <div class="percent">0%</div>
-        </div>
-    </div>
+<div class="skill">
+  <p>Agile & STLC</p>
+  <div class="progress"><span style="width:88%"></span></div>
+</div>
 
 </section>
 
-
-
 <!-- EXPERIENCE -->
-<section class="section" id="experience">
-    <h2>Experience</h2>
+<section class="section reveal" id="experience">
+<h2>Experience</h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <h3>QA Engineer</h3>
     <p>
-        Worked on Automotive IVI systems and enterprise web applications.
-        Created 300+ test cases and logged 200+ defects.
+      2.5+ years experience in SDLC, STLC, Regression Testing,
+      REST API Validation, CI/CD Testing and Defect Lifecycle Management.
     </p>
+  </div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section class="section glass" id="contact">
-    <h2>Contact Me</h2>
+<section class="section reveal" id="contact">
+<h2>Contact</h2>
 
-    <div class="contact-container">
-
-        <a href="tel:+919876543210" class="contact-card">
-            <i class="fas fa-phone"></i>
-            <span>+91 89190 32893</span>
-        </a>
-
-        <a href="mailto:nagaanvesh50@gmail.com" class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <span>nagaanvesh50@gmail.com</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/madineninagaanvesh/"
-           target="_blank" class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn Profile</span>
-        </a>
-
-        <a href="https://www.naukri.com/"
-           target="_blank" class="contact-card">
-            <i class="fas fa-briefcase"></i>
-            <span>Naukri Profile</span>
-        </a>
-
-    </div>
+<div class="contact-container">
+  <a href="tel:+919876543210"><i class="fas fa-phone"></i></a>
+  <a href="mailto:nagaanvesh50@gmail.com"><i class="fas fa-envelope"></i></a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.naukri.com/" target="_blank"><i class="fas fa-briefcase"></i></a>
+</div>
 </section>
 
+<!-- ATS KEYWORDS -->
+<div style="display:none;">
+QA Engineer, Manual Testing, API Testing, Regression Testing,
+Smoke Testing, Sanity Testing, UAT, STLC, SDLC,
+JIRA, Postman, REST API Testing,
+Automotive IVI Testing, Agile Methodology,
+Defect Lifecycle Management, CI/CD Testing
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="script.js"></script>
 
 </body>
